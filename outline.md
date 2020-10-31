@@ -186,7 +186,6 @@ router.put('/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
   try {
     const response = await axios.delete(`${TODO_URL}/${req.params.id}`);
-    console.log('response', response);
     res.json(response.data);
   } catch (error) {
     res.sendStatus(400);
